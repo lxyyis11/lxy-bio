@@ -1,132 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap');
+
 :root {
-            --neon-red: #dd1c1c;
-            --neon-pink: #d9d9d9;
-            --neon-cyan: #dd1c1c;
-            --neon-purple: #dd1c1c;
-            --bg: #050011;
-            --card: #0d001f;
-            --text: #d9d9d9;
-            font-family: 'Orbitron', sans-serif;
-        }
+    --neon-red: #dd1c1c;
+    --neon-pink: #d9d9d9;
+    --neon-cyan: #dd1c1c;
+    --neon-purple: #dd1c1c;
+    --bg: #050011;
+    --card: #0d001f;
+    --text: #d9d9d9;
+    font-family: 'Orbitron', sans-serif;
+}
 
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0
-        }
+body {
+    background: radial-gradient(circle at 30% 20%, #140032, #050011 70%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    color: var(--text);
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
+}
 
-        body {
-            background: radial-gradient(circle at 30% 20%, #140032, #050011 70%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 24px;
-            color: var(--text);
-            text-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
-        }
+.container {
+    width: 100%;
+    max-width: 430px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    padding: 32px;
+    box-shadow: 0 0 18px var(--neon-purple), inset 0 0 18px rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(6px);
+}
 
-        .container {
-            width: 100%;
-            max-width: 430px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 18px;
-            padding: 32px;
-            box-shadow: 0 0 18px var(--neon-purple), inset 0 0 18px rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(6px);
-        }
+.header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
 
-        .header {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
+.avatar {
+    width: 74px;
+    height: 74px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 2px solid var(--neon-cyan);
+    box-shadow: 0 0 12px var(--neon-cyan);
+}
 
-        .avatar {
-            width: 74px;
-            height: 74px;
-            border-radius: 14px;
-            overflow: hidden;
-            border: 2px solid var(--neon-cyan);
-            box-shadow: 0 0 12px var(--neon-cyan);
-        }
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-        .avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover
-        }
+.meta .name {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--neon-pink);
+}
 
-        .meta .name {
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--neon-pink)
-        }
+.meta .handle {
+    font-size: 13px;
+    margin-top: 3px;
+    color: var(--text);
+}
 
-        .meta .handle {
-            font-size: 13px;
-            margin-top: 3px;
-            color: var(--text)
-        }
+.bio {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text);
+}
 
-        .bio {
-            margin-top: 16px;
-            font-size: 14px;
-            line-height: 1.5;
-            color: var(--text);
-        }
+.links {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
 
-        .links {
-            margin-top: 24px;
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
+.link {
+    display: block;
+    padding: 16px 18px;
+    background: var(--card);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 12px var(--neon-cyan);
+    transition: 0.15s ease;
+}
 
-        .link {
-            display: block;
-            padding: 16px 18px;
-            background: var(--card);
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 0 12px var(--neon-cyan);
-            transition: 0.15s ease;
-        }
+.link:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 0 18px var(--neon-pink), 0 0 24px var(--neon-cyan);
+}
 
-        .link:hover {
-            transform: translateY(-4px) scale(1.02);
-            box-shadow: 0 0 18px var(--neon-pink), 0 0 24px var(--neon-cyan);
-        }
+.title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 
-        .title {
-            display: flex;
-            align-items: center;
-            gap: 12px
-        }
+.icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    background: linear-gradient(140deg, var(--neon-pink), var(--neon-cyan));
+    box-shadow: 0 0 12px var(--neon-cyan);
+    color: #050011;
+}
 
-        .icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            background: linear-gradient(140deg, var(--neon-pink), var(--neon-cyan));
-            box-shadow: 0 0 12px var(--neon-cyan);
-            color: #050011;
-        }
-
-        .footer {
-            margin-top: 20px;
-            text-align: center;
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.6);
-
-        }
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
